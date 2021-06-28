@@ -1,10 +1,11 @@
 from django.urls import path
-
 from . import views
+from django.conf.urls import url
 
-app_name = "SiteCoord"
+#app_name = "SiteCoord"
 
 urlpatterns = [
     path('', views.coordindex, name='coordindex'),
-    path('export-csv/', views.export, name='export'),
+    path('export-json/', views.exportjson, name='exportjson'),
+    path('export-csv', views.export, name='export')
 ]

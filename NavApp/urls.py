@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from SiteCoord import views
 
 
 urlpatterns = [
@@ -23,6 +24,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('loco/', include('SiteNav.urls', namespace='SiteNavigation')),
     path('coord/', include('SiteCoord.urls')),
-    path('export-csv/', include('SiteCoord.urls')),
+    path('export-csv/', views.export, name='export'),
+    path('export-json/', views.exportjson, name='exportjson'),
     
 ]
