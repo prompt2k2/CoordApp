@@ -1,3 +1,6 @@
 {
-    "python.pythonPath": "c:\\Users\\IT Manager\\DEV\\NAVAPP\\nav_env\\Scripts\\python.exe"
+    "python.autoComplete.extraPaths": [
+        "c:/Users/IT Manager/DEV/NAVAPP/nav_env/Scripts/python.exe"
+    ],
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
 }

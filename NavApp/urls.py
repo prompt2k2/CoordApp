@@ -21,5 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('UserApp.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('loco/', include('SiteNav.urls', namespace='SiteNavigation')),
+    path('coord/', include('SiteCoord.urls')),
+    path('export-csv/', include('SiteCoord.urls')),
     
 ]
