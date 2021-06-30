@@ -18,6 +18,7 @@ from django.urls import path, include
 from SiteCoord import views
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('UserApp.urls')),
@@ -26,5 +27,5 @@ urlpatterns = [
     path('coord/', include('SiteCoord.urls')),
     path('export-csv/', views.export, name='export'),
     path('export-json/', views.exportjson, name='exportjson'),
-    
+    path('home/', include('MapSite.urls')),
 ]
