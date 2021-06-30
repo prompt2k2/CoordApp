@@ -28,4 +28,6 @@ urlpatterns = [
     path('export-csv/', views.export, name='export'),
     path('export-json/', views.exportjson, name='exportjson'),
     path('home/', include('MapSite.urls')),
+    path('maps/', include('MapSite.urls')),
+    path('siteloc/', views.siteloc, name='sitelock'),
 ]
