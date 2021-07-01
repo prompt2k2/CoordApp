@@ -23,11 +23,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('UserApp.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-    #path('loco/', include('SiteNav.urls', namespace='SiteNavigation')),
     path('coord/', include('SiteCoord.urls')),
     path('export-csv/', views.export, name='export'),
     path('export-json/', views.exportjson, name='exportjson'),
     path('home/', include('MapSite.urls')),
     path('maps/', include('MapSite.urls')),
-    path('siteloc/', views.siteloc, name='sitelock'),
+    
 ]
