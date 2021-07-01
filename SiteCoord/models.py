@@ -5,8 +5,8 @@ class Sites(models.Model):
     SiteName = models.CharField(verbose_name='Site Name', max_length=50)
     SiteManager = models.CharField(verbose_name='Site Manager', max_length=40)
     SiteEngineer = models.CharField(verbose_name='Site Engineer', max_length=40)
-    Longitude = models.FloatField()
     Latitude = models.FloatField()
+    Longitude = models.FloatField()
     
     def __str__(self):
         return self.SiteID

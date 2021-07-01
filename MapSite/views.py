@@ -15,7 +15,7 @@ def home(request):
     
     
    
-    for code, name, mgr, eng, long, lat in zip(payload.SiteID, payload.SiteName, payload.SiteManager, payload.SiteEngineer, payload.Longitude, payload.Latitude):
+    for code, name, mgr, eng, lat, long in zip(payload.SiteID, payload.SiteName, payload.SiteManager, payload.SiteEngineer, payload.Longitude, payload.Latitude):
         tooltip = code, name, eng
         label ='{},{},{}'.format(code, mgr, eng)
         label = folium.Popup(label, perse_html=True)
@@ -25,9 +25,6 @@ def home(request):
     m = m._repr_html_()
     context = {'SiteMap': m}
     
-    
-    print (type(payload))
-    print (payload)
     
     return render(request, 'Mapsite/home.html', context)
 
