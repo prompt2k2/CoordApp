@@ -6,6 +6,6 @@ from django.conf.urls import url
 
 urlpatterns = [
     
-    path('export-json/', views.exportjson, name='exportjson'),
-    path('export-csv', views.export, name='export')
+    path('json/', views.exportjson, name='exportjson'),
+    path('', views.export, name='export')
 ]

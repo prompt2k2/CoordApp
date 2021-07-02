@@ -4,6 +4,6 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
-    #path('maps/', views.Maker, name='Maker'),
-    path('export-csv', include('SiteCoord.urls'), name='export'),
+    path('sites/', views.AllSite, name='AllSite'),
+    #path('export-csv', include('SiteCoord.urls'), name='export'),
 ]

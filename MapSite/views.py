@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-import folium
+import folium, pandas as pd, json
 from SiteCoord.resources import SitesResource
+from SiteCoord.models import Sites
 
 def home(request):
     sites_resource = SitesResource()
@@ -25,9 +26,24 @@ def home(request):
     m = m._repr_html_()
     context = {'SiteMap': m}
     
-    
     return render(request, 'Mapsite/home.html', context)
 
     
+def AllSite(request):
+    sites_resource = SitesResource()
+    dataset = sites_resource.export()
     
+    payload = dataset.export('df')
+    datajson = payload.reset_index().to_json(orient='records')
+    data = []
+    data = json.loads(datajson)
+    context = {'data': data}
+    
+    print(type(data))
+    
+    
+    return render(request, "Mapsite/sitelist.html", context)
 
+def SiteList(request):
+    context = {'sitelist':Sites.object.all()}
+    return render(request, "Mapsite/sitelist.html", context)

@@ -24,9 +24,9 @@ urlpatterns = [
     path('', include('UserApp.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('coord/', include('SiteCoord.urls')),
-    path('export-csv/', views.export, name='export'),
-    path('export-json/', views.exportjson, name='exportjson'),
+    #path('export-csv/', views.export, name='export'),
+    #path('export-json/', views.exportjson, name='exportjson'),
     path('home/', include('MapSite.urls')),
-    path('maps/', include('MapSite.urls')),
+    
     
 ]
