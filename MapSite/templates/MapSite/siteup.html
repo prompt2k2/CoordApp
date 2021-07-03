@@ -15,16 +15,16 @@
     </thead>
     <tbody>
         <!-- jinja2 Technique -->
-        {% for i in data %}
+
         <tr>
-            <td>{{i.SiteID}}</td>
-            <td>{{i.SiteName}}</td>
-            <td>{{i.SiteManager}}</td>
-            <td>{{i.SiteEngineer}}</td>
-            <td>{{i.Latitude}}</td>
-            <td>{{i.Longitude}}</td>
+            <td>{{data.SiteID}}</td>
+            <td>{{data.SiteName}}</td>
+            <td>{{data.SiteManager}}</td>
+            <td>{{data.SiteEngineer}}</td>
+            <td>{{data.Latitude}}</td>
+            <td>{{data.Longitude}}</td>
         </tr>
-        {% endfor %}
+
     </tbody>
 </table>
 

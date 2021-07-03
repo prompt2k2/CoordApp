@@ -3,8 +3,6 @@ from django.http import HttpResponse
 from .resources import SitesResource
 
 
-
-
 def export(request):
     sites_resource = SitesResource()
     dataset = sites_resource.export()
